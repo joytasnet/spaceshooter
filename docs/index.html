@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | SpaceShooter1</title>
+    <title>SpaceShooter1</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
@@ -11,15 +11,57 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/docs.json", {onProgress: UnityProgress});
     </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">SpaceShooter1</div>
+	<style>
+  body{
+    background: #eee;
+  }
+  #container{
+    width:960px;
+    margin:0 auto;
+  }
+  h1{
+    border-bottom:2px solid #333;
+  }
+  #contents{
+    margin-bottom:30px;
+  }
+  #gl-wrapper{
+    position: relative;
+    width:960px;
+    height:700px;
+  }
+  .webgl-content {
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
+}
+  footer{
+    border-top:2px solid #333;
+    padding-top:10px;
+    text-align: right;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="contents">
+      <h1>SpaceShooter</h1>
+      <p>左右キーで移動します。</p>
+    </div>
+    <div id="gl-wrapper">
+      <div class="webgl-content">
+        <div id="gameContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <div class="title">SpaceShooter</div>
+        </div>
       </div>
     </div>
-  </body>
+    <footer>
+      &copy;joytas.net
+    </footer>
+  </div>
+</body>
 </html>
