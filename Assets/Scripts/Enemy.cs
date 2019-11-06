@@ -16,8 +16,8 @@ public class Enemy : MonoBehaviour
     {
         transform.Rotate(1f, 1f, 1f);
         transform.Translate(0, 0, -speed*Time.deltaTime,Space.World);
-        if (transform.position.z < -30.0f) {
-            Destroy(gameObject);
+        if (transform.position.z < -29.0f) {
+            GameObject.FindObjectOfType<GameController>().GameOver();
         }
     }
 }
