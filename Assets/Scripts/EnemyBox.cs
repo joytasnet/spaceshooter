@@ -8,7 +8,7 @@ public class EnemyBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(CreateEnemy());
+        routine=StartCoroutine(CreateEnemy());
     }
 
     
@@ -21,5 +21,12 @@ public class EnemyBox : MonoBehaviour
                 Quaternion.identity
                 );
         }
+    }
+
+    Coroutine routine=null;
+
+    public void Stop() {
+        StopCoroutine(routine);
+        Time.timeScale=0;
     }
 }
